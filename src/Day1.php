@@ -9,8 +9,7 @@ class Day1 {
         $length = strlen($this->input);
         $sum = 0;
 
-        for ($i=0; $i <= $length; $i++)
-        {
+        for ($i=0; $i <= $length; $i++) {
             if($this->input[$i] === $this->input[($i+$jump) % $length]) {
                 $sum += $this->input[$i];
             }
