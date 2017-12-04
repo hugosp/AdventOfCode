@@ -534,13 +534,13 @@ qrwu mgnw hvflf ytspp mco ikvbqg fflvh wts cbbf';
         $table = explode("\n", $this->input);
         foreach ($table as $row) {
             $values = preg_split('/\s+/', $row);
-            print_r($values);
             if(count($values) == count(array_unique($values))) {
                 $good = true;
                 foreach ($values as $key => $val) {
                     foreach ($values as $k => $v) {
                         if(count_chars($val, 1) == count_chars($v, 1) && $key != $k){
                             $good = false;
+                            break 2;
                         }
                     }
                 }
